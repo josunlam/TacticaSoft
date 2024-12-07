@@ -1,0 +1,125 @@
+INSERT INTO clientes (Cliente,Telefono,Correo)
+VALUES ('Pepe', '1164014683', 'josunlam@gmail.com');
+
+INSERT INTO clientes (Cliente,Telefono,Correo)
+VALUES ('Jose', '1164014684', 'josun@gmail.com');
+
+INSERT INTO clientes (Cliente,Telefono,Correo)
+VALUES ('Alberto', '1164014685', 'josu@gmail.com');
+
+INSERT INTO clientes (Cliente,Telefono,Correo)
+VALUES ('Tito', '1164014686', 'josce@gmail.com');
+
+----------------------------------------------------------
+
+INSERT INTO productos (Nombre,Precio,Categoria)
+VALUES('galletitas',200,'almacen');
+
+INSERT INTO productos (Nombre,Precio,Categoria)
+VALUES('queso',600,'almacen');
+
+INSERT INTO productos (Nombre,Precio,Categoria)
+VALUES('cafe',500,'almacen');
+
+INSERT INTO productos (Nombre,Precio,Categoria)
+VALUES('salamin',1000,'carniceria');
+
+INSERT INTO productos (Nombre,Precio,Categoria)
+VALUES('salchicha',1200,'carniceria');
+
+INSERT INTO productos (Nombre,Precio,Categoria)
+VALUES('bife',4600,'carniceria');
+
+INSERT INTO productos (Nombre,Precio,Categoria)
+VALUES('jugo',1100,'bebidas');
+
+INSERT INTO productos (Nombre,Precio,Categoria)
+VALUES('coca',2300,'bebidas');
+
+INSERT INTO productos (Nombre,Precio,Categoria)
+VALUES('fanta',2500,'bebidas');
+
+INSERT INTO productos (Nombre,Precio,Categoria)
+VALUES('francesa',6800,'ferreteria');
+
+INSERT INTO productos (Nombre,Precio,Categoria)
+VALUES('martillo',4200,'ferreteria');
+
+----------------------------------------------------------
+
+INSERT INTO ventas (IDCliente,Fecha,Total)
+VALUES(1,'02-12-24',2000);
+
+INSERT INTO ventas (IDCliente,Fecha,Total)
+VALUES(1,'03-12-24',13000);
+
+INSERT INTO ventas (IDCliente,Fecha,Total)
+VALUES(2,'03-12-24',8000);
+
+INSERT INTO ventas (IDCliente,Fecha,Total)
+VALUES(2,'04-12-24',9300);
+
+INSERT INTO ventas (IDCliente,Fecha,Total)
+VALUES(3,'04-12-24',7000);
+
+INSERT INTO ventas (IDCliente,Fecha,Total)
+VALUES(3,'05-12-24',5600);
+
+INSERT INTO ventas (IDCliente,Fecha,Total)
+VALUES(4,'05-12-24',11000);
+
+----------------------------------------------------------
+
+INSERT INTO ventasitems (IDVenta,IDProducto,PrecioUnitario,Cantidad,PrecioTotal)
+VALUES(1,1,200,2,400)
+
+INSERT INTO ventasitems (IDVenta,IDProducto,PrecioUnitario,Cantidad,PrecioTotal)
+VALUES(1,2,600,1,600)
+
+INSERT INTO ventasitems (IDVenta,IDProducto,PrecioUnitario,Cantidad,PrecioTotal)
+VALUES(1,3,500,2,1000)
+
+INSERT INTO ventasitems (IDVenta,IDProducto,PrecioUnitario,Cantidad,PrecioTotal)
+VALUES(2,11,4200,2,8400)
+
+INSERT INTO ventasitems (IDVenta,IDProducto,PrecioUnitario,Cantidad,PrecioTotal)
+VALUES(2,6,4600,1,4600)
+
+INSERT INTO ventasitems (IDVenta,IDProducto,PrecioUnitario,Cantidad,PrecioTotal)
+VALUES(3,4,1000,1,1000)
+
+INSERT INTO ventasitems (IDVenta,IDProducto,PrecioUnitario,Cantidad,PrecioTotal)
+VALUES(3,5,1200,2,2400)
+
+INSERT INTO ventasitems (IDVenta,IDProducto,PrecioUnitario,Cantidad,PrecioTotal)
+VALUES(3,6,4600,1,4600)
+
+INSERT INTO ventasitems (IDVenta,IDProducto,PrecioUnitario,Cantidad,PrecioTotal)
+VALUES(4,9,2500,1,2500)
+
+INSERT INTO ventasitems (IDVenta,IDProducto,PrecioUnitario,Cantidad,PrecioTotal)
+VALUES(4,10,6800,1,6800)
+
+INSERT INTO ventasitems (IDVenta,IDProducto,PrecioUnitario,Cantidad,PrecioTotal)
+VALUES(5,7,1100,2,2200)
+
+INSERT INTO ventasitems (IDVenta,IDProducto,PrecioUnitario,Cantidad,PrecioTotal)
+VALUES(5,8,2300,1,2300)
+
+INSERT INTO ventasitems (IDVenta,IDProducto,PrecioUnitario,Cantidad,PrecioTotal)
+VALUES(5,9,2500,1,2500)
+
+INSERT INTO ventasitems (IDVenta,IDProducto,PrecioUnitario,Cantidad,PrecioTotal)
+VALUES(6,3,500,2,1000)
+
+INSERT INTO ventasitems (IDVenta,IDProducto,PrecioUnitario,Cantidad,PrecioTotal)
+VALUES(6,6,4600,1,4600)
+
+INSERT INTO ventasitems (IDVenta,IDProducto,PrecioUnitario,Cantidad,PrecioTotal)
+VALUES(7,10,6800,1,6800)
+
+INSERT INTO ventasitems (IDVenta,IDProducto,PrecioUnitario,Cantidad,PrecioTotal)
+VALUES(7,11,4200,1,4200)
+
+
+

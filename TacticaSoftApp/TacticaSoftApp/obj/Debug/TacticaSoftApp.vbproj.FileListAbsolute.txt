@@ -1,0 +1,12 @@
+C:\Users\ALF\Desktop\C#\TacticaSoft\TacticaSoftApp\TacticaSoftApp\bin\Debug\TacticaSoftApp.exe.config
+C:\Users\ALF\Desktop\C#\TacticaSoft\TacticaSoftApp\TacticaSoftApp\bin\Debug\TacticaSoftApp.exe
+C:\Users\ALF\Desktop\C#\TacticaSoft\TacticaSoftApp\TacticaSoftApp\bin\Debug\TacticaSoftApp.pdb
+C:\Users\ALF\Desktop\C#\TacticaSoft\TacticaSoftApp\TacticaSoftApp\bin\Debug\TacticaSoftApp.xml
+C:\Users\ALF\Desktop\C#\TacticaSoft\TacticaSoftApp\TacticaSoftApp\obj\Debug\TacticaSoftApp.vbprojAssemblyReference.cache
+C:\Users\ALF\Desktop\C#\TacticaSoft\TacticaSoftApp\TacticaSoftApp\obj\Debug\TacticaSoftApp.Form1.resources
+C:\Users\ALF\Desktop\C#\TacticaSoft\TacticaSoftApp\TacticaSoftApp\obj\Debug\TacticaSoftApp.Resources.resources
+C:\Users\ALF\Desktop\C#\TacticaSoft\TacticaSoftApp\TacticaSoftApp\obj\Debug\TacticaSoftApp.vbproj.GenerateResource.cache
+C:\Users\ALF\Desktop\C#\TacticaSoft\TacticaSoftApp\TacticaSoftApp\obj\Debug\TacticaSoftApp.vbproj.CoreCompileInputs.cache
+C:\Users\ALF\Desktop\C#\TacticaSoft\TacticaSoftApp\TacticaSoftApp\obj\Debug\TacticaSoftApp.exe
+C:\Users\ALF\Desktop\C#\TacticaSoft\TacticaSoftApp\TacticaSoftApp\obj\Debug\TacticaSoftApp.xml
+C:\Users\ALF\Desktop\C#\TacticaSoft\TacticaSoftApp\TacticaSoftApp\obj\Debug\TacticaSoftApp.pdb
