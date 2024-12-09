@@ -69,16 +69,17 @@ Public Class Form1
         Dim index As Integer
         index = DataGridView1.CurrentCell.RowIndex + 1
 
+        Dim var0 As String = DataGridView1.Rows(index - 1).Cells(0).Value.ToString()
         Select Case radioButtonFocus
             Case 1
                 conexionBD = New Base("clientes")
                 clientes = New Cliente(conexionBD)
-                dataSet = clientes.eliminarCliente(index)
+                dataSet = clientes.eliminarCliente(var0)
                 RadioButton2.PerformClick() : RadioButton1.PerformClick()
             Case 2
                 conexionBD = New Base("productos")
                 productos = New Producto(conexionBD)
-                dataSet = productos.eliminarProducto(index)
+                dataSet = productos.eliminarProducto(var0)
                 RadioButton1.PerformClick() : RadioButton2.PerformClick()
             Case 3
                 conexionBD = New Base("ventas")
@@ -87,91 +88,61 @@ Public Class Form1
                 RadioButton1.PerformClick() : RadioButton3.PerformClick()
         End Select
 
-        'Me.DataGridView1.DataSource = dataSet
-        'Me.DataGridView1.DataMember = "clientes"
     End Sub
 
-    'Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-    '    Dim numero As Integer
-    '    Dim nRowIndex = DataGridView1.Rows.Count - 2
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Dim index As Integer
+        index = DataGridView1.CurrentCell.RowIndex + 1
 
-    '    If RadioButton1.Checked Then numero = 0 'Tratara la tabla clientes
-    '    If RadioButton2.Checked Then numero = 1 'Tratará la tabla productos
-    '    If RadioButton3.Checked Then numero = 2 'Tratar{a la tabla ventas
+        Dim var1 As String = DataGridView1.Rows(index - 1).Cells(1).Value.ToString()
+        Dim var2 As String = DataGridView1.Rows(index - 1).Cells(2).Value.ToString()
+        Dim var3 As String = DataGridView1.Rows(index - 1).Cells(3).Value.ToString()
 
-    '    Dim var1 As String = DataGridView1.Rows(nRowIndex).Cells(0).Value.ToString()
-    '    Dim var2 As String = DataGridView1.Rows(nRowIndex).Cells(1).Value.ToString()
-    '    Dim var3 As String = DataGridView1.Rows(nRowIndex).Cells(2).Value.ToString()
+        Select Case radioButtonFocus
+            Case 1
+                conexionBD = New Base("clientes")
+                clientes = New Cliente(conexionBD)
+                dataSet = clientes.insertarCliente(var1, var2, var3)
+                RadioButton2.PerformClick() : RadioButton1.PerformClick()
+            Case 2
+                conexionBD = New Base("productos")
+                productos = New Producto(conexionBD)
+                dataSet = productos.insertarProducto(var1, var2, var3)
+                RadioButton1.PerformClick() : RadioButton2.PerformClick()
+            Case 3
+                conexionBD = New Base("ventas")
+                ventas = New Venta(conexionBD)
+                dataSet = ventas.modificarVenta(index)
+                RadioButton1.PerformClick() : RadioButton3.PerformClick()
+        End Select
+    End Sub
 
-    'dataSet = conexionBD.ejecutarSQL("SELECT Cliente,Telefono,Correo from clientes")
+    Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Dim index As Integer
+        index = DataGridView1.CurrentCell.RowIndex + 1
 
-    'Me.DataGridView1.DataSource = dataSet
-    'Me.DataGridView1.DataMember = "clientes"
+        Dim var0 As String = DataGridView1.Rows(index - 1).Cells(0).Value.ToString()
+        Dim var1 As String = DataGridView1.Rows(index - 1).Cells(1).Value.ToString()
+        Dim var2 As String = DataGridView1.Rows(index - 1).Cells(2).Value.ToString()
+        Dim var3 As String = DataGridView1.Rows(index - 1).Cells(3).Value.ToString()
 
-    '    Select Case numero
-    '        Case 0
-    '            Dim producto = New Producto(var1, var2, var3)
-    '            producto.insertarProducto()
+        Select Case radioButtonFocus
+            Case 1
+                conexionBD = New Base("clientes")
+                clientes = New Cliente(conexionBD)
+                dataSet = clientes.modificarCliente(var0, var1, var2, var3)
+                RadioButton2.PerformClick() : RadioButton1.PerformClick()
+            Case 2
+                conexionBD = New Base("productos")
+                productos = New Producto(conexionBD)
+                dataSet = productos.modificarProducto(var0, var1, var2, var3)
+                RadioButton1.PerformClick() : RadioButton2.PerformClick()
+            Case 3
+                conexionBD = New Base("ventas")
+                ventas = New Venta(conexionBD)
+                dataSet = ventas.modificarVenta(index)
+                RadioButton1.PerformClick() : RadioButton3.PerformClick()
+        End Select
+    End Sub
 
-    '    End Select
-
-    '    darAlta()
-
-    '    'If RadioButton Then
-    'End Sub
-
-    'Private Sub darAlta()
-    '    Dim numero As Integer
-    '    Dim nRowIndex = DataGridView1.Rows.Count - 2
-    '    'Dim nCol = DataGridView1.Columns.Count
-
-    '    If RadioButton1.Checked Then numero = 0
-    '    If RadioButton2.Checked Then numero = 1
-    '    If RadioButton3.Checked Then numero = 2
-
-
-
-    '    Select Case numero
-    '        Case 0
-    '            TextBox1.Text = "INSERT INTO clientes (Cliente,Telefono,Correo)" +
-    '                            "VALUES('" + var1 + "'," + var2 + ",'" + var3 + "')"
-    '            dataAdapter = New SqlDataAdapter()
-    '            Dim sqli As New SqlCommand(TextBox1.Text, connection)
-    '            dataAdapter.SelectCommand = sqli
-    '            dataSet = New DataSet()
-    '            dataSet.Clear()
-    '            connection.Open()
-    '            dataAdapter.Fill(dataSet, "clientes")
-    '            connection.Close()
-
-    '            RadioButton2.PerformClick() : RadioButton1.PerformClick()
-    '        Case 1
-    '            TextBox1.Text = "INSERT INTO productos (Nombre,Precio,Categoria)" +
-    '                            "VALUES('" + var1 + "'," + var2 + ",'" + var3 + "')"
-    '            dataAdapter = New SqlDataAdapter()
-    '            Dim sqli As New SqlCommand(TextBox1.Text, connection)
-    '            dataAdapter.SelectCommand = sqli
-    '            dataSet = New DataSet()
-    '            dataSet.Clear()
-    '            connection.Open()
-    '            dataAdapter.Fill(dataSet, "productos")
-    '            connection.Close()
-
-    '            RadioButton1.PerformClick() : RadioButton2.PerformClick()
-    '        Case 2
-    '            TextBox1.Text = "INSERT INTO ventas (Fecha,Total)" +
-    '                            "VALUES('" + var1 + "'," + var2 + ")"
-    '            dataAdapter = New SqlDataAdapter()
-    '            Dim sqli As New SqlCommand(TextBox1.Text, connection)
-    '            dataAdapter.SelectCommand = sqli
-    '            dataSet = New DataSet()
-    '            dataSet.Clear()
-    '            connection.Open()
-    '            dataAdapter.Fill(dataSet, "ventas")
-    '            connection.Close()
-
-    '            RadioButton1.PerformClick() : RadioButton3.PerformClick()
-    '    End Select
-
-    'End Sub
 End Class
