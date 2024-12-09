@@ -121,5 +121,11 @@ VALUES(7,10,6800,1,6800)
 INSERT INTO ventasitems (IDVenta,IDProducto,PrecioUnitario,Cantidad,PrecioTotal)
 VALUES(7,11,4200,1,4200)
 
+----------------------------------------------------------------
 
+select *,PrecioUnitario*Cantidad As PrecioTotal from ventasitems
+
+select SUM(PrecioTotal) from ventasitems
+where IDVenta=1
+group by IDVenta
 
